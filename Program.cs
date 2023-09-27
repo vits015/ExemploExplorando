@@ -15,12 +15,6 @@ foreach (var item in estados)
     Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
 }
 
-
-string k;
-
-Console.WriteLine(estados.TryGetValue("BA", out k));
-Console.WriteLine(k);
-
 estados.Remove("BA");
 estados["SP"] = estados["SP"] + " - Estado alterado!";
 foreach (var item in estados)
