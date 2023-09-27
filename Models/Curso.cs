@@ -14,5 +14,14 @@ namespace ExemploExplorando.Models
         {
             Alunos.Add(aluno);        
         }
+        public int QuantidadeAlunos() => Alunos.Count;
+        public bool RemoverAluno(Pessoa aluno) => Alunos.Remove(aluno);     
+        public void ListarAlunos()
+        {
+            foreach (Pessoa aluno in Alunos)
+            {
+                Console.WriteLine(aluno.NomeCompleto);
+            }
+        }   
     }
 }

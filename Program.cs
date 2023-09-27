@@ -1,7 +1,12 @@
-﻿using ExemploExplorando.Models;
+﻿try
+{
+    string[] linha = File.ReadAllLines("arquivo/arq_.txt");
 
-Pessoa p = new();
-
-p.Nome = "José";
-p.Sobrenome = "Silva";
-p.Apresentar();
+    foreach (string s in linha)
+    {
+        Console.WriteLine(s);
+    }
+} catch(Exception ex)
+{
+    Console.WriteLine($"Ocorreu uma exceção genérica. {ex.Message}");
+}
