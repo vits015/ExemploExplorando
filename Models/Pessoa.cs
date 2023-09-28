@@ -16,6 +16,12 @@ namespace ExemploExplorando.Models
             Nome = nome;
             Sobrenome = sobrenome;
         }
+
+        public void Deconstruct(out string nome,out string sobrenome)
+        {
+            nome = Nome;
+            sobrenome = Sobrenome;
+        }
         private string _nome,_sobrenome;        
         private int _idade;
         public string Nome 
